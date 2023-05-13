@@ -349,8 +349,9 @@ namespace Calc
                     form1.Hide();
                     
                 }
-                    
+                
             }
+            label1.Text = "";
         }
 
         private void button17_MouseEnter(object sender, EventArgs e)
@@ -431,6 +432,32 @@ namespace Calc
         private void button21_MouseLeave(object sender, EventArgs e)
         {
             button21.BackgroundImage = null;
+        }
+
+        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        {
+            panel1.Capture = false;
+            Message m = Message.Create(Handle, 0xa1, new IntPtr(2), IntPtr.Zero);
+            WndProc(ref m);
+        }
+
+        private void button22_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text.Length < textBox1.MaxLength)
+                if (textBox1.Text != "0")
+                    textBox1.Text += Math.Round(Math.PI, 2);
+                else
+                    textBox1.Text = Math.Round(Math.PI, 2).ToString();
+        }
+
+        private void button22_MouseEnter(object sender, EventArgs e)
+        {
+            button22.BackgroundImage = Image.FromFile("img/circle.png");
+        }
+
+        private void button22_MouseLeave(object sender, EventArgs e)
+        {
+            button22.BackgroundImage = null;
         }
 
         private void button17_Click(object sender, EventArgs e)

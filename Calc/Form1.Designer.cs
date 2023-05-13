@@ -52,6 +52,7 @@
             this.button19 = new System.Windows.Forms.Button();
             this.button20 = new System.Windows.Forms.Button();
             this.button21 = new System.Windows.Forms.Button();
+            this.button22 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -255,10 +256,11 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
             this.panel1.Controls.Add(this.button12);
             this.panel1.Controls.Add(this.button11);
-            this.panel1.Location = new System.Drawing.Point(-6, -5);
+            this.panel1.Location = new System.Drawing.Point(-10, -5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(417, 54);
+            this.panel1.Size = new System.Drawing.Size(421, 54);
             this.panel1.TabIndex = 12;
+            this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             // 
             // button12
             // 
@@ -469,12 +471,31 @@
             this.button21.MouseEnter += new System.EventHandler(this.button21_MouseEnter);
             this.button21.MouseLeave += new System.EventHandler(this.button21_MouseLeave);
             // 
+            // button22
+            // 
+            this.button22.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button22.FlatAppearance.BorderSize = 0;
+            this.button22.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(30)))), ((int)(((byte)(30)))));
+            this.button22.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button22.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button22.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(228)))), ((int)(((byte)(229)))), ((int)(((byte)(234)))));
+            this.button22.Location = new System.Drawing.Point(335, 200);
+            this.button22.Name = "button22";
+            this.button22.Size = new System.Drawing.Size(70, 70);
+            this.button22.TabIndex = 23;
+            this.button22.Text = "PI";
+            this.button22.UseVisualStyleBackColor = true;
+            this.button22.Click += new System.EventHandler(this.button22_Click);
+            this.button22.MouseEnter += new System.EventHandler(this.button22_MouseEnter);
+            this.button22.MouseLeave += new System.EventHandler(this.button22_MouseLeave);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(21)))), ((int)(((byte)(28)))));
-            this.ClientSize = new System.Drawing.Size(404, 619);
+            this.ClientSize = new System.Drawing.Size(404, 633);
+            this.Controls.Add(this.button22);
             this.Controls.Add(this.button21);
             this.Controls.Add(this.button20);
             this.Controls.Add(this.button19);
@@ -532,6 +553,7 @@
         private System.Windows.Forms.Button button19;
         private System.Windows.Forms.Button button20;
         private System.Windows.Forms.Button button21;
+        private System.Windows.Forms.Button button22;
     }
 }
 
