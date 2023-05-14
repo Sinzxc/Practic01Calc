@@ -12,10 +12,11 @@ namespace Calc
 {
     public partial class Form2 : Form
     {
-        public Form2(string s)
+        public Form2(string s,int pos)
         {
             InitializeComponent();
             label1.Text = s;
+            label1.Left = pos;
         }
 
 
